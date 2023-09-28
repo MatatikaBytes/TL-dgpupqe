@@ -1,0 +1,26 @@
+{
+  "plugin_type": "transforms",
+  "name": "dbt-google-analytics",
+  "namespace": "tap_google_analytics",
+  "variant": "matatika",
+  "label": "dbt-google-analytics",
+  "repo": "https://github.com/Matatika/dbt-tap-google-analytics",
+  "pip_url": "https://github.com/Matatika/dbt-tap-google-analytics@v0.4.0",
+  "requires": {
+    "extractors": [
+      {
+        "name": "tap-google-analytics",
+        "variant": "matatika"
+      }
+    ],
+    "transformers": [
+      {
+        "name": "dbt",
+        "variant": "dbt-labs"
+      }
+    ]
+  },
+  "vars": {
+    "schema": "{{ env_var('DBT_SOURCE_SCHEMA') }}"
+  }
+}
